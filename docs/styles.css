@@ -1,18 +1,84 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
+/* Centered Container */
 .container {
-    width: 50%;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    max-width: 500px;
+    background: #fff;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
 }
 
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Headings */
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Inputs, Select, and Buttons */
 input, select, button {
-    margin: 10px;
-    padding: 8px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Input Fields */
+input, select {
+    background-color: #fff;
+}
+
+/* Button Styling */
+button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Result Display */
+h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 15px;
+}
+
+#result {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
 }
