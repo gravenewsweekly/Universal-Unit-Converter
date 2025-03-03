@@ -9,20 +9,31 @@
 <body>
     <div class="container">
         <h2>Universal Unit Converter</h2>
+
         <label for="category">Choose category:</label>
-        <select id="category">
+        <select id="category" onchange="updateUnits()">
             <option value="length">Length</option>
             <option value="weight">Weight</option>
             <option value="temperature">Temperature</option>
             <option value="currency">Currency</option>
         </select>
 
-        <label for="from">From:</label>
-        <input type="text" id="fromValue" placeholder="Enter value">
-        <select id="fromUnit"></select>
+        <div class="input-group">
+            <label for="fromValue">Enter Value:</label>
+            <input type="number" id="fromValue" placeholder="Enter value">
+        </div>
 
-        <label for="to">To:</label>
-        <select id="toUnit"></select>
+        <div class="unit-selection">
+            <div>
+                <label for="fromUnit">From:</label>
+                <select id="fromUnit"></select>
+            </div>
+            <span class="arrow">➡</span>
+            <div>
+                <label for="toUnit">To:</label>
+                <select id="toUnit"></select>
+            </div>
+        </div>
 
         <button onclick="convert()">Convert</button>
 
